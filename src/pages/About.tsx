@@ -2,15 +2,13 @@ import {
   VStack,
   Text,
   HStack,
-  Button,
   Grid,
   GridItem,
   Box,
   Heading,
   keyframes,
 } from "@chakra-ui/react";
-import { FaDownload } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { aboutMe, technicalSkills } from "../../public/data/about";
 
 interface Props {
@@ -23,19 +21,6 @@ const fadeIn = keyframes`
 `;
 
 const About = ({ setPage }: Props) => {
-  const [loading, setLoading] = useState(false);
-
-  const downloadCV = () => {
-    setLoading(true);
-    const link = document.createElement("a");
-    link.href = aboutMe.cvPath;
-    link.setAttribute("download", aboutMe.cvFileNameAfterDownload);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setLoading(false);
-  };
-
   useEffect(() => {
     setPage("about.html");
   });
@@ -69,23 +54,6 @@ const About = ({ setPage }: Props) => {
           </Text>
         ))}
       </Box>
-
-      {/* 
-      <Button
-        marginTop={6}
-        width="200px"
-        background="#0BCEAF"
-        onClick={downloadCV}
-        _hover={{ background: "#09a88d" }}
-        _active={{ transform: "scale(0.96)", background: "#079f84" }}
-        transition="all 0.2s ease"
-        isLoading={loading}
-        loadingText="Downloading..."
-      >
-        <FaDownload />
-        <Text marginLeft={2}>Download CV</Text>
-      </Button>
-      */}
 
       <Box width="100%">
         <Heading

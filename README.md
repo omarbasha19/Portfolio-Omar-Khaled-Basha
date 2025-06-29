@@ -1,29 +1,39 @@
-# Kareem Hamouda's Portfolio with the Visual Studio Code Theme
+
+# Omar Khaled Basha's Data Science Portfolio – Visual Studio Code Theme
 
 ## Table of Contents
 
 - [Overview](#overview)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My Process](#my-process)
   - [Built With](#built-with)
 - [How to Use](#how-to-use)
-- [Make It Your Own](#make-it-your-own)
+- [Customize Your Info](#customize-your-info)
 - [Deploy on Vercel](#deploy-on-vercel)
-- [Use Your Own Email API](#use-your-own-email-api)
+- [Contact Integration](#contact-integration)
 - [Author](#author)
 
 ---
 
 ## Overview
 
+This is a personalized portfolio website inspired by Visual Studio Code's interface, built using modern web technologies including **React**, **TypeScript**, and **Chakra UI**.
+
+The purpose of this portfolio is to present **Omar Khaled Basha** — a dedicated **Artificial Intelligence and Data Science student** — through a sleek, developer-oriented layout that showcases both professional and personal strengths.
+
+### 🔍 What’s Inside:
+
+- 🧑‍💼 A professional bio and contact section  
+- 📂 A featured projects gallery covering machine learning, AI, and full-stack development  
+- 🛠️ A categorized technical skills section  
+- 📱 Fully responsive design, ready to deploy via [Vercel](https://vercel.com)
+
+This portfolio is fully customizable and built for developers who want to present their work cleanly, efficiently, and with a touch of personality.
+
 ### Screenshot
 
-![](./public/assets/project-vscode.webp)
+![Portfolio Screenshot](public/assets/screenshot-portfolio.png)
 
-### Links
-
-- **Live Demo**: [https://vs-code-themed-portfolio-theta.vercel.app/](https://vs-code-themed-portfolio-theta.vercel.app/)
 
 ---
 
@@ -31,103 +41,81 @@
 
 ### Built With
 
-- [Vite](https://vitejs.dev/) – Frontend build tool
-- [React](https://reactjs.org/) – JavaScript library for building UIs
-- [TypeScript](https://www.typescriptlang.org/) – Typed JavaScript
-- [Chakra UI](https://chakra-ui.com/) – Component library for styling
-- [EmailJS](https://www.emailjs.com/) – For email sending functionality
-- [Formik](https://formik.org/) – For form handling
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [EmailJS](https://www.emailjs.com/) *(optional)*
+- [Formik](https://formik.org/)
 
 ---
 
 ## How to Use
 
-1. **Fork** this repository to your GitHub account.
-2. **Clone** the forked repository:
+1. **Clone** the repository:
    ```bash
-   git clone https://github.com/your-username/vs-code-themed-portfolio.git
+   git clone https://github.com/omarbasha19/Portfolio-Omar-Khaled-Basha.git
    ```
-3. Navigate to the project folder:
+2. Navigate to the project folder:
    ```bash
-   cd vs-code-themed-portfolio
+   cd Portfolio-Omar-Khaled-Basha
    ```
-4. Install all dependencies:
+3. Install dependencies:
    ```bash
    npm install
    ```
-5. Start the development server:
+4. Start the dev server:
    ```bash
    npm run dev
    ```
-6. Open your browser and go to [http://localhost:5173](http://localhost:5173) to view your local version.
+5. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## Make It Your Own
-
-This project was designed to be **developer-friendly and customizable**.
+## Customize Your Info
 
 - Go to the `/public/data` folder.
-- You'll find simple `.ts` files containing your:
-  - Bio
-  - Skills
-  - Projects
-  - Contact Info
-- Modify those JavaScript objects with your own content.
-- Restart the dev server to apply changes:
+- Update these files with your information:
+  - `home.ts` → personal image, contact, education, and social links.
+  - `about.ts` → bio and skills.
+  - `projects.ts` → your real projects and GitHub links.
+- Restart dev server to apply:
   ```bash
   npm run dev
   ```
-
-No complicated setup or backend configuration required!
 
 ---
 
 ## Deploy on Vercel
 
-You can **deploy this portfolio in minutes** using [Vercel](https://vercel.com/):
+You can easily deploy this portfolio using [Vercel](https://vercel.com/):
 
-1. **Fork** the repo.
-2. Head over to [https://vercel.com/new](https://vercel.com/new).
-3. Connect your GitHub account and import your forked repo.
-4. Vercel will auto-detect the project settings (no manual config needed).
-5. Click **Deploy**, and your portfolio will be live almost instantly!
-
-> 💡 All necessary Vercel settings are already in place in the project structure.
+1. Push your project to GitHub.
+2. Visit [https://vercel.com/new](https://vercel.com/new).
+3. Import your GitHub repository.
+4. Follow the prompts and click **Deploy**.
 
 ---
 
-## Use Your Own Email API
+## Contact Integration
 
-This project uses a **custom-built backend** deployed on [Vercel](https://vercel.com/), which utilizes **Nodemailer** for email functionality.
+To enable real-time email sending from the contact form:
 
-If you'd like to use your own API instance:
-
-1. Visit the backend repo: [https://github.com/KareemEhab/email-sender](https://github.com/KareemEhab/email-sender)
-2. Follow the instructions in its `README.md` to:
-   - Set up the email server
-   - Configure a Gmail to be used to send emails
-   - Deploy the API on Vercel or your preferred platform
-3. Once deployed, update the frontend file:
-   - Open `/src/utils/sendEmail.ts`
-   - Replace the fetch URL with your deployed API endpoint:
-     ```ts
-     return await fetch("https://your-vercel-deployment.vercel.app/send", {
-       method: "POST",
-       headers: { "Content-Type": "application/json" },
-       body: JSON.stringify({
-         name,
-         email,
-         subject,
-         message,
-         receiver_email,
-       }),
-     });
-     ```
+- Configure [EmailJS](https://emailjs.com), or
+- Deploy your own email API and update:
+  ```ts
+  /src/utils/sendEmail.ts
+  ```
 
 ---
 
 ## Author
 
-- Website – [Kareem Hamouda](https://vs-code-themed-portfolio-theta.vercel.app/)
-- LinkedIn – [@Kareem Hamouda](https://www.linkedin.com/in/kareem-hamouda/)
+- **Name**: Omar Khaled Basha
+- **Email**: obasha998@gmail.com
+- **LinkedIn**: [@omar-khaled](https://www.linkedin.com/in/omar-khaled-87378a2ba/)
+- **GitHub**: [@omarbasha19](https://github.com/omarbasha19)
+
+---
+
+> This portfolio is a personalized and rebranded version of an open-source template, now reflecting the work and identity of Omar Khaled Basha.
